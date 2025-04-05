@@ -1,0 +1,197 @@
+/* style.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Great Vibes', cursive;
+  overflow-x: hidden;
+  background: linear-gradient(to top right, #fcd5ce, #f8edeb);
+  cursor: url('https://cdn-icons-png.flaticon.com/32/833/833472.png'), auto;
+}
+
+.intro {
+  height: 100vh;
+  background: url('https://i.imgur.com/Ff3V7Uw.gif') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.cake-container {
+  position: relative;
+  animation: fadeInZoom 2s ease-out forwards;
+}
+
+.cake {
+  width: 180px;
+  transform: scale(0);
+  animation: popCake 1.5s forwards ease-out;
+}
+
+.birthday-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4;
+  opacity: 0;
+  animation: glowText 3s ease-in forwards;
+}
+
+.start-btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 22px;
+  background: linear-gradient(to right, #ffb6b9, #fae3d9);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffb6b9;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.main-scene {
+  display: none;
+  background: #fff0f5;
+  padding: 60px 20px;
+}
+
+.animation-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.animation-area img {
+  width: 150px;
+  transition: transform 0.5s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.animation-area img:hover {
+  transform: scale(1.2) rotate(3deg);
+}
+
+.wishes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wish {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.wish img {
+  width: 150px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+.wish p {
+  font-size: 24px;
+}
+
+.wish.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInZoom {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes popCake {
+  to { transform: scale(1.2); }
+}
+
+@keyframes glowText {
+  to {
+    opacity: 1;
+    text-shadow: 0 0 15px #fff, 0 0 25px #ff69b4, 0 0 35px #ff69b4;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Pháo hoa */
+.fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://i.imgur.com/FIFNCws.gif') no-repeat center center;
+  background-size: cover;
+  z-index: 999;
+  animation: fireworksAnimation 2s infinite;
+}
+
+@keyframes fireworksAnimation {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Tàu chạy ngang màn hình */
+.train {
+  position: relative;
+  animation: trainMove 6s linear infinite;
+}
+
+@keyframes trainMove {
+  0% { left: -300px; }
+  100% { left: 100vw; }
+}
+
+/* Bóng bay bay lên tự nhiên */
+.balloon {
+  animation: floatUp 4s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(-2deg); }
+}
+
+/* Hoa rơi từ trên xuống */
+.flower {
+  animation: flowerFall 5s linear infinite;
+}
+
+@keyframes flowerFall {
+  0% { transform: translateY(-50px) rotate(0deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Gấu và mèo nhún nhảy */
+.bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px
