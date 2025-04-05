@@ -1,0 +1,18 @@
+// script.js
+function triggerAnimation() {
+  const cake = document.querySelector('.cake');
+  cake.style.animation = 'popCake 1.5s forwards ease-out';
+}
+
+function startCelebration(event) {
+  event.stopPropagation(); // ngăn click gây hiệu ứng lại
+  document.querySelector('.intro').style.display = 'none';
+  document.getElementById('mainScene').style.display = 'block';
+}
+
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.wish').forEach(wish => {
+    const rect = wish.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      wish.classList.add('visible');
+    }
