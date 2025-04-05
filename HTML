@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Intro Section -->
+  <div class="intro" onclick="triggerAnimation()">
+    <div class="cake-container">
+      <img src="https://i.imgur.com/lGZifFf.png" alt="Birthday Cake" class="cake" />
+      <h1 class="birthday-text">Happy Birthday</h1>
+    </div>
+    <button class="start-btn" onclick="startCelebration(event)">Start</button>
+  </div>
+
+  <!-- Celebration Section -->
+  <div class="main-scene" id="mainScene">
+    <div class="animation-area">
+      <img src="https://i.imgur.com/zDQpDJw.png" class="train" alt="Birthday Train">
+      <img src="https://i.imgur.com/E4zMZPQ.png" class="balloon" alt="Balloons">
+      <img src="https://i.imgur.com/xKjL7vM.png" class="flower" alt="Flowers">
+      <img src="https://i.imgur.com/6tk1Ovj.png" class="teddy bounce" alt="Teddy Bear">
+      <img src="https://i.imgur.com/OA2X3Gz.png" class="cat bounce" alt="Cat">
+    </div>
+    <div class="wishes" id="wishes">
+      <div class="wish">
+        <img src="https://i.imgur.com/1Q8ZQvN.jpg" alt="Wish 1">
+        <p>Wishing you a magical birthday filled with joy!</p>
+      </div>
+      <div class="wish">
+        <img src="https://i.imgur.com/t5WvqCz.jpg" alt="Wish 2">
+        <p>May your dreams come true this year!</p>
+      </div>
+      <div class="wish">
+        <img src="https://i.imgur.com/Uz7XXrD.jpg" alt="Wish 3">
+        <p>Stay happy, stay amazing. Happy Birthday!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pháo hoa (fireworks) -->
+  <div class="fireworks"></div>
+
+  <!-- Âm nhạc nền (Piano Version of Happy Birthday) -->
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="https://www.bensound.com/bensound-m
